@@ -15,7 +15,7 @@
  */
 package com.avanza.gs.test;
 
-import static org.awaitility.Awaitility.await;
+import static com.gigaspaces.start.SystemInfo.LOOKUP_LOCATORS_SYS_PROP;
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -34,6 +34,7 @@ public class ZookeeperLeaderSelectorTest {
 
 	@Test
 	public void testZookeeperFailover() throws Exception {
+		LOG.info("Starting Zookeeper failover test...");
 		try (GenericRunningPu fruitPu = StandalonePuConfigurers.partitionedPu("classpath:/fruit-pu.xml")
 				.numberOfPrimaries(1)
 				.numberOfBackups(1)
