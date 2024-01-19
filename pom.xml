@@ -151,7 +151,7 @@
 		<gigaspaces.version>16.2.1</gigaspaces.version>
 
 		<!-- this lib uses later versions of ZooKeeper & Curator than GigaSpaces -->
-		<zookeeper.version>3.8.0</zookeeper.version>
+		<zookeeper.version>3.8.3</zookeeper.version>
 		<curator.version>5.2.1</curator.version>
 	</properties>
 
